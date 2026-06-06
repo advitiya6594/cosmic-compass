@@ -1,6 +1,6 @@
 {
   "buildCommand": "bun run build",
   "outputDirectory": ".output",
-  "framework": "vite",
+  "framework": null,
   "installCommand": "bun install"
 }

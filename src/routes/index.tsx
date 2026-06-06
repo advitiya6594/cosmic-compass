@@ -1,29 +1,36 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Navbar } from "@/components/Navbar";
+import { Hero } from "@/components/Hero";
+import { CardReadings } from "@/components/CardReadings";
+import { Zodiac } from "@/components/Zodiac";
+import { Horoscope } from "@/components/Horoscope";
+import { Footer } from "@/components/Footer";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Your App" },
-      { name: "description", content: "Replace this with a one-sentence description of your app." },
-      { property: "og:title", content: "Your App" },
-      { property: "og:description", content: "Replace this with a one-sentence description of your app." },
+      { title: "Lunara — Tarot & Astrology Readings Beneath the Moon" },
+      {
+        name: "description",
+        content:
+          "Hand-interpreted tarot spreads and natal astrology charts. A quiet mystical practice for celestial guidance.",
+      },
+      { property: "og:title", content: "Lunara — Tarot & Astrology" },
+      { property: "og:description", content: "Mystical tarot readings and astrological insight under moonlight." },
     ],
   }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <main className="relative">
+      <Navbar />
+      <Hero />
+      <CardReadings />
+      <Zodiac />
+      <Horoscope />
+      <Footer />
+    </main>
   );
 }
